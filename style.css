@@ -79,6 +79,10 @@ nav ul li:hover >ul{
 nav ul li ul li{
     padding: 0.8rem;
 }
+nav ul li ul:hover{
+    padding: 0.8rem;
+    display: block;
+}
 .logo{
     height: 5vh;
 }
@@ -103,14 +107,42 @@ main{
     flex-direction: row;            /*responsive*/
     flex-wrap: wrap;                /*responsive*/
 }
-.nombre, .contenido, .rrss{
+.nombre{
+    color: var(--color1);
+    padding-bottom: 15px;
+    font-size: 20px;
+    letter-spacing: 0.3rem;
+}
+.contenido, .rrss{
     background-color: var(--color5);
     opacity: 65%;
-    color: var(--black-text);
+    color: var(--color1);
     padding-left: 7px;
     padding-bottom: 7px;
     padding-right: 37pxpx;
     width: 100%;
+}
+.rrss a{
+    color: var(--color2);
+    padding: 5px;
+}
+.rrss a:hover{
+    background-color: var(--color1);
+    color: var(--color5);
+}
+footer{
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    background-color: var(--color1);
+    color: var(--color5);
+    opacity: 70%;
+    display: flex;
+    justify-content: right;
+    height: 7vh;
+}
+.copyright{
+    padding-top: 7px;
 }
 
 

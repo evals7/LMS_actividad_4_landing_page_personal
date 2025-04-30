@@ -31,11 +31,12 @@ header{
 
 body{
     background-image: url(./img/fondo.jpg);
-    background-repeat: no repeat;
+    background-repeat: no-repeat;
     background-position: center;
-    background-size: 100% ;
+    background-size: cover ;
     background-attachment: fixed;
 }
+/*******Menú******/
 ul{
     list-style: none;
 }
@@ -83,6 +84,7 @@ nav ul li ul:hover{
     padding: 0.8rem;
     display: block;
 }
+/******Logo******/
 .logo{
     height: 5vh;
 }
@@ -92,7 +94,7 @@ nav ul li ul:hover{
     border-radius: 10px;
 }
 
-/*main de lal web*/
+/******parte central homepage*****/
 main{
     position: relative;
     width: 50%;
@@ -119,7 +121,7 @@ main{
     color: var(--color1);
     padding-left: 7px;
     padding-bottom: 7px;
-    padding-right: 37pxpx;
+    padding-right: 37px;
     width: 100%;
 }
 .rrss a{
@@ -144,6 +146,34 @@ footer{
 .copyright{
     padding-top: 7px;
 }
+
+/*Formulario de contacto*/
+form, .titulo-contacto{
+    color: var(--color1);
+    padding: 10px 20px 10px 20px;
+    margin: left; 
+    position: relative;
+    width: 50%;
+    right: -45%;
+    align-items: right;
+    text-align: left;
+}
+.titulo-contacto{
+    padding-bottom: 10px;
+    font-size: 30px;
+    letter-spacing: 0.1rem;
+    margin-top: 10rem;
+}
+form{
+    background: linear-gradient(to left, var(--color5), var(--color1));
+    opacity: 65%;
+    color: var(--color5);
+}
+label{
+    display: block;
+    margin: 8px;
+}
+
 
 
 

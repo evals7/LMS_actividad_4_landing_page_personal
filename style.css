@@ -1,5 +1,5 @@
 /*Fuente para la web*/
-@import url('https://fonts.googleapis.com/css2?family=Istok+Web:ital,wght@0,400;0,700;1,400;1,700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Istok+Web:ital,wght@0,400;0,700;1,400;1,700&family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap');
 
 *{
     padding: 0px;
@@ -7,7 +7,7 @@
     text-decoration: none;
     list-style: none;
     box-sizing: border-box;
-    font-family: "Istok Web", sans-serif;
+    font-family: "Ubuntu-light", sans-serif;
 }
 
 :root{
@@ -119,6 +119,7 @@ main{
     background-color: var(--color5);
     opacity: 65%;
     color: var(--color1);
+    padding-top: 7px;;
     padding-left: 7px;
     padding-bottom: 7px;
     padding-right: 37px;
@@ -174,6 +175,32 @@ label{
     margin: 8px;
 }
 
+/******Curriculum Vitae********/
+/*Nombre y foto*/
+.cabecera-cv{
+    position: relative;
+    color: var(--color1);
+    text-align: center;
+    margin-top: 5px;
+}
+.foto-perfil-cv img{
+    position: relative;
+    align-items: center;
+    padding: 10px 10px 10px 10px;
+    height: 280px;
+    width: 280px;
+    border-radius: 50%;
+}
 
-
-
+/*Presentación y habilidades*/
+.contenido-cv{
+    font-size: 20px;
+    color: var(--color1);
+    background: var(--color5);
+    padding: 5px;
+    width: 30%;
+    height: 100%;
+    text-align: left;
+    line-height: 1.5rem;
+}
+/*Experiencia laboral y formación*/

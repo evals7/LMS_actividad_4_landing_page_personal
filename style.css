@@ -201,9 +201,8 @@ label{
 .foto-perfil-cv img{
     display: block;
     position: relative;
-    align-items: center;
     padding: 10px;
-    height: 280px;
+    height: 230px;
     width: 280px;
     border-radius: 50%;
     border: 5px solid var(--color5);
@@ -211,6 +210,7 @@ label{
 
 .nombre-cv{
     color: var(--color5);
+    padding-left: 2rem;
 }
 .contenido-cv{
     display: flex;

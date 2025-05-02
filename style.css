@@ -134,7 +134,6 @@ main{
     color: var(--color5);
 }
 footer{
-    position: absolute;
     bottom: 0;
     width: 100%;
     background-color: var(--color1);
@@ -143,6 +142,7 @@ footer{
     display: flex;
     justify-content: right;
     height: 7vh;
+    position: absolute;
 }
 .copyright{
     padding-top: 7px;
@@ -176,31 +176,116 @@ label{
 }
 
 /******Curriculum Vitae********/
-/*Nombre y foto*/
+.cv{
+    background-image: url(./img/fondo.jpg);
+    box-shadow: 10px 10px 10px rgba(0, 0, 0, 0.5);
+    width: 80%;
+    margin: 0 auto;
+    position: relative;
+}
+
+/*Nombre y foto -- Parte superior*/
 .cabecera-cv{
     position: relative;
     color: var(--color1);
     text-align: center;
     margin-top: 5px;
+    font-size: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: var(--color1);
+    padding: 20px;
 }
+
 .foto-perfil-cv img{
+    display: block;
     position: relative;
     align-items: center;
-    padding: 10px 10px 10px 10px;
+    padding: 10px;
     height: 280px;
     width: 280px;
     border-radius: 50%;
+    border: 5px solid var(--color5);
 }
 
-/*Presentación y habilidades*/
-.contenido-cv{
-    font-size: 20px;
-    color: var(--color1);
-    background: var(--color5);
-    padding: 5px;
-    width: 30%;
-    height: 100%;
-    text-align: left;
-    line-height: 1.5rem;
+.nombre-cv{
+    color: var(--color5);
 }
-/*Experiencia laboral y formación*/
+.contenido-cv{
+    display: flex;
+    width: 100%;
+}
+/*Perfil y presentacion --margen izquierda*/
+.perfil-cv{
+    display: inline-block;
+    padding: 2rem 1rem 5rem 1rem;
+    width: 35%;
+    background-color: var(--color4);
+    color: var(--color1);
+}
+
+/*Experiencia y formación - parte derecha*/
+.experiencia-cv{
+    display: inline-block;
+    padding: 2rem;
+    width: 65%;
+    color: var(--color1);
+    background-color: var(--color5);
+}
+
+/*Formato del texto*/
+h3{
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+    font-size: 20px;
+    font-style: bold;
+}
+p{
+    text-align: justify;
+    word-spacing: 0.2rem;
+}
+.contenido-cv ul{
+    margin-left: 5%;
+  }
+  .contenido-cv ul li{
+    list-style-type: disc;
+    padding-top: 0.2rem;
+  }
+
+.contacto-cv ul li{
+    list-style-type: none;
+    
+}
+.contacto-cv ul li a{
+    color: var(--color1);
+}
+.contacto-cv ul li a:hover{
+    color: var(--color3)
+}
+
+ h4{
+    padding-top: 0.5rem;
+    padding-bottom: 0.5rem;
+    font-size: 15px;
+    
+}
+.formacion-cv ul li{
+    list-style-type: square;
+}
+.empresas-cv a{
+    color: var(--color1);
+    text-decoration: underline;
+}
+.footer-cv{
+    bottom: 0;
+    width: 100%;
+    background-color: var(--color1);
+    color: var(--color5);
+    opacity: 70%;
+    display: flex;
+    justify-content: right;
+    align-items: end;
+    height: 7vh;
+    position: relative;
+}

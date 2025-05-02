@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Landing page</title>
+    <title>Inicio</title>
     <link rel="stylesheet" href="style.css">
     <link rel="shortcut icon" href="./img/favicon.png" type="image/x-icon">
     <!--Librería de iconos de fontAwesome ("fas fa-camera")-->
@@ -13,10 +13,10 @@
 <body>
     <header>
         <nav>
-            <img src="img/favicon.png" alt="logo" class="logo">
+            <a href="index.html"><img src="img/favicon.png" alt="logo" class="logo"></a>
             <ul>
                 <li><a href="#">Sobre mi</a></li>
-                <li><a href="cv.html">CV</a></li>
+                <li><a href="cv.html" target="_blank">CV</a></li>
                 <li><a href="#">Proyectos</a>
                     <ul>
                         <li><a href="#">Programación</a></li>
@@ -28,9 +28,8 @@
                 <li><a href="formulario.html" target="_blank">Contacto</a></li>
             </ul>
         </nav>
-
     </header>
-    <main>
+    <main class="main-index">
         <div class="nombre">
             <h1>Eva López</h1>
         </div>
@@ -47,8 +46,8 @@
         </div>
     </main>
     <footer>
-        <div class="copyright">
-            <p>&copy;Web creada para la Actividad 4 de Lenguaje de marcas de DAM en UNIRFP</p>
+        <div class="footer-cv">
+            <p>&copy;2025 Eva López Sainz-Aja</p>
         </div>
     </footer>
 </body>

@@ -20,6 +20,8 @@
     --black-text: #000000;
 
 }
+
+/********Landing Page - Index*******/
 /*Header de la web. Menú, y logo*/
 header{
     margin: auto;
@@ -36,7 +38,7 @@ body{
     background-size: cover ;
     background-attachment: fixed;
 }
-/*******Menú******/
+/*Menú*/
 ul{
     list-style: none;
 }
@@ -84,7 +86,7 @@ nav ul li ul:hover{
     padding: 0.8rem;
     display: block;
 }
-/******Logo******/
+/*Logo*/
 .logo{
     height: 5vh;
 }
@@ -94,8 +96,8 @@ nav ul li ul:hover{
     border-radius: 10px;
 }
 
-/******parte central homepage*****/
-main{
+/*parte central homepage*/
+.main-index{
     position: relative;
     width: 50%;
     right: -50%;
@@ -105,7 +107,6 @@ main{
     justify-content: space-between;
     align-items: right;
     text-align: left;
-
     flex-direction: row;            /*responsive*/
     flex-wrap: wrap;                /*responsive*/
 }
@@ -148,7 +149,7 @@ footer{
     padding-top: 7px;
 }
 
-/*Formulario de contacto*/
+/**********Formulario de contacto**************/
 form, .titulo-contacto{
     color: var(--color1);
     padding: 10px 20px 10px 20px;
@@ -277,15 +278,5 @@ p{
     color: var(--color1);
     text-decoration: underline;
 }
-.footer-cv{
-    bottom: 0;
-    width: 100%;
-    background-color: var(--color1);
-    color: var(--color5);
-    opacity: 70%;
-    display: flex;
-    justify-content: right;
-    align-items: end;
-    height: 7vh;
-    position: relative;
-}
+
+/**************Fin Curriculum Vitae***************/

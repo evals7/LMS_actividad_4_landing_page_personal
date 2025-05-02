@@ -7,30 +7,55 @@
     <title>Contacto</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"/>
 </head>
-<body class="formulario">
+<body>
+    <header>
+        <nav>
+            <a href="index.html"><img src="img/favicon.png" alt="logo" class="logo"></a>
+            <ul>
+                <li><a href="#">Sobre mi</a></li>
+                <li><a href="cv.html" target="_blank">CV</a></li>
+                <li><a href="#">Proyectos</a>
+                    <ul>
+                        <li><a href="#">Programación</a></li>
+                        <li><a href="#">Entornos de desarrollo</a></li>
+                        <li><a href="#">Bases de datos</a></li>
+                        <li><a href="#">Lenguaje de marcas</a></li>
+                    </ul>
+                </li>
+                <li><a href="formulario.html" target="_blank">Contacto</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main class="formulario">
     <h1 class="titulo-contacto">¿Necesitas ayuda con tu página web? Escríbeme</h1>
-    <form action="mailto:eva" method="post" autocomplete="on" target="_blank">
-        <fieldset>
-            <legend>Inserta tus datos</legend>
+        <form action="mailto:eva" method="post" autocomplete="on" target="_blank">
+            <fieldset>
+                <legend>Inserta tus datos</legend>
 
-            <label for="nombre"></label>
-            <input type="text" placeholder="Nombre" id="nombre" required>
+                <label for="nombre"></label>
+                <input type="text" placeholder="Nombre" id="nombre" required>
 
-            <label for="apellidos"></label>
-            <input type="text" placeholder="Apellidos" id="apellidos" required>
+                <label for="apellidos"></label>
+                <input type="text" placeholder="Apellidos" id="apellidos" required>
 
-            <label for="correo_electronico"></label>
-            <input type="text" placeholder="Correo electrónico" id="correo_electronico" required>
-        </fieldset>
-    <br>
-        <fieldset>
-            <legend>¿En qué puedo ayudarte?</legend>
-            <label for="comentario"></label>
-            <textarea name="text" placeholder="Escribe aquí tu consulta" id="comentario"></textarea>
-        </fieldset>
-    <label for="button"></label>
-    <input type="submit" value="Enviar" id="button">
-    <input type="reset" value="Borrar" id="button">
-    </form>
+                <label for="correo_electronico"></label>
+                <input type="text" placeholder="Correo electrónico" id="correo_electronico" required>
+            </fieldset>
+        <br>
+            <fieldset>
+                <legend>¿En qué puedo ayudarte?</legend>
+                <label for="comentario"></label>
+                <textarea name="text" placeholder="Escribe aquí tu consulta" id="comentario"></textarea>
+            </fieldset>
+        <label for="button"></label>
+        <input type="submit" value="Enviar" id="button">
+        <input type="reset" value="Borrar" id="button">
+        </form>
+    </main>
+    <footer>
+        <div>
+            <p>&copy;2025 Eva López Sainz-Aja</p>
+        </div>
+    </footer>
 </body>
 </html>

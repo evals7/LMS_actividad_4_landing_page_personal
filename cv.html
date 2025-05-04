@@ -4,29 +4,24 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
+    <link rel="shortcut icon" href="./img/favicon.png" type="image/x-icon">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"/>
     <title>CV</title>
 </head>
 <body>
-    <header>
-        <nav>
-            <a href="index.html" target="_blank"><img src="img/favicon.png" alt="logo" class="logo"></a>
-            <ul>
-                <li><a href="#">Sobre mi</a></li>
-                <li><a href="cv.html" target="_blank">CV</a></li>
-                <li><a href="#">Proyectos</a>
-                    <ul>
-                        <li><a href="#">Programación</a></li>
-                        <li><a href="#">Entornos de desarrollo</a></li>
-                        <li><a href="#">Bases de datos</a></li>
-                        <li><a href="#">Lenguaje de marcas</a></li>
-                    </ul>
-                </li>
-                <li><a href="formulario.html" target="_blank">Contacto</a></li>
-            </ul>
-        </nav>
-
-    </header>
+    <nav>
+        <input type="checkbox" name="checkbox" id="checkbox">
+        <label for="checkbox" class="drawer">
+            <i class="fa fa-bars" aria-hidden="true"></i>
+        </label>
+        <a href="index.html"><img src="img/favicon.png" alt="logo" class="logo"></a>
+        <ul class="menu">
+            <li><a href="index.html"><i class="fa-solid fa-house"></i> Inicio</a></li>
+            <li><a href="cv.html" target="_blank"><i class="fa-solid fa-file"></i> CV</a></li>
+            <li><a href="proyectos.html"><i class="fa-solid fa-diagram-project"></i> Proyectos</a></li>
+            <li><a href="formulario.html" target="_blank"><i class="fa-solid fa-message"></i> Contacto</a></li>
+        </ul>
+    </nav>
     <main>
     <div class="cv">
         <div class="cabecera-cv">

@@ -12,80 +12,54 @@
 
 :root{
     --color1: #003049;
+    --color1_trans:  rgba(0, 48, 73, 0.5);
     --color2: #d62828;
     --color3: #f77f00;
+    --color3_trans: rgba(247, 127, 0, 0.5);
     --color4: #fcbf49;
+    --color4_trans: rgba(252, 191, 73, 0.5);
     --color5: #eae2b7;
-    --white-text: #ffffff;
-    --black-text: #000000;
+    --color5_trans: rgba(234, 226, 183, 0.5);
 
+}
+body{
+    background-image: url(./img/fondo.jpg);
+    height: 100%;
+    display: flex;
+    flex-direction: column;
 }
 
 /********Landing Page - Index*******/
-/*Header de la web. Menú, y logo*/
-header{
-    margin: auto;
-    width: auto;
-    background-color: var(--color1);
-    font-size: 20px;
-    opacity: 0.7;
+/*drawer, logo y Menú*/
+
+/*Drawer*/
+.drawer{
+    display: none; /*para ocultar el icono burguer por defecto*/
+}
+#checkbox{
+    display: none; /*para ocultar el checkbox*/
 }
 
-body{
-    background-image: url(./img/fondo.jpg);
-    background-repeat: no-repeat;
-    background-position: center;
-    background-size: cover ;
-    background-attachment: fixed;
-}
-/*Menú*/
-ul{
-    list-style: none;
-}
-nav{
-    position: relative;
-    width: 100%;
-    height: 8vh;  
-    display: flex;
-    justify-content: space-around; /*coloca el mismo espacio a izq y derecha del total*/
-    align-items: left;
-    padding: 10px 15px;
-    background-color: var(--color1);
-    color: var(--color5);
-}
-nav ul{
-    display:flex;
-    list-style:none;
-}
-nav ul li{
-    border-right: none;
-}
-nav ul li a{
-    color: var(--color5);
-    font-size: 1rem;
-    padding: 1rem;
-}
-nav ul li a:hover{
-    background-color: var(--color4);
+/*pantallas pequeñas: mostramos el .drawer (icono burguer) y ocultamos el menú.*/
+@media (max-width: 768px){ /*para que se muestre en pantallas de max 768px*/
+    .drawer{
+        display: block; /*mostrar drawer por defecto*/
+        font-size: 1.5rem;
+        color: var(--color1);
+        cursor: pointer;
+    }
+    .menu{
+        display: none; /*ocultar menú por defecto*/
+        flex-direction: column;
+        width: 100%;
+        position: absolute;
+        top: 8vh;
+    }
+    #checkbox:checked ~ .menu { /*marcar checkbox y enlazar al menú*/
+        display: flex;
+    }
 }
 
-nav ul li ul{
-    display: none;
-}
-nav ul li:hover >ul{
-    display: block;
-    position: absolute;
-    background-color: var(--color1);
-    padding: 0.8rem;
-    
-}
-nav ul li ul li{
-    padding: 0.8rem;
-}
-nav ul li ul:hover{
-    padding: 0.8rem;
-    display: block;
-}
 /*Logo*/
 .logo{
     height: 5vh;
@@ -96,81 +70,158 @@ nav ul li ul:hover{
     border-radius: 10px;
 }
 
-/*parte central homepage*/
-.main-index{
+/*Nav*/
+
+nav{
+    display: flex;
+    justify-content: space-around; /*coloca el mismo espacio a izq y derecha del total*/
     position: relative;
-    width: 50%;
-    right: -50%;
-    padding-right: 5rem;;
-    padding-top: 15rem;
-    display: flex;
-    justify-content: space-between;
-    align-items: right;
-    text-align: left;
-    flex-direction: row;            /*responsive*/
-    flex-wrap: wrap;                /*responsive*/
-}
-.nombre{
-    color: var(--color1);
-    padding-bottom: 15px;
-    font-size: 20px;
-    letter-spacing: 0.3rem;
-}
-.contenido, .rrss{
-    background-color: var(--color5);
-    opacity: 65%;
-    color: var(--color1);
-    padding-top: 7px;;
-    padding-left: 7px;
-    padding-bottom: 7px;
-    padding-right: 37px;
     width: 100%;
-}
-.rrss a{
-    color: var(--color2);
-    padding: 5px;
-}
-.rrss a:hover{
-    background-color: var(--color1);
-    color: var(--color5);
-}
-footer{
-    bottom: 0;
-    width: 100%;
-    background-color: var(--color1);
-    color: var(--color5);
-    opacity: 70%;
-    display: flex;
-    justify-content: right;
-    height: 7vh;
-    position: absolute;
-}
-.copyright{
-    padding-top: 7px;
+    height: 8vh;  
+    padding: 10px 15px;
+    opacity: 0.7;
 }
 
-/**********Formulario de contacto**************/
-form, .titulo-contacto{
+/*Menú*/
+
+.menu {
+    display: flex;
+    flex-wrap: wrap;
+    margin-top: 0; 
+    gap: 10px; 
+
+}
+
+.menu li a{
     color: var(--color1);
-    padding: 10px 20px 10px 20px;
-    margin: left; 
+    box-sizing: border-box;
+    font-size: 1rem;
+    padding: 10px;
+    display: flex;
+    align-items: center;
+    gap: 5px;
+}
+
+.menu li a:hover{
+    background-color: var(--color4);
+    color: var(--color1);
+}
+
+.menu li{
     position: relative;
-    width: 50%;
-    right: -45%;
-    align-items: right;
-    text-align: left;
 }
-.titulo-contacto{
-    padding-bottom: 10px;
-    font-size: 30px;
-    letter-spacing: 0.1rem;
-    margin-top: 10rem;
+
+/*Contenido central homepage*/
+.contenido-index{
+    display: flex;  
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+    gap: 2rem;
+    width: 80%;
+    margin: auto;
+    background-color: rgba(0, 48, 73, 0.3);
+
 }
-form{
-    background: linear-gradient(to left, var(--color5), var(--color1));
-    opacity: 65%;
+
+.foto-perfil{
+    order: 1;
+}
+
+.foto-perfil img{
+    width: 600px;
+    height: 600px;
+    object-fit: cover;
+    border-radius: 50%;
+    border: 3px solid var(--color1);
+    padding: 5px;
+    margin: 50px;
+}
+.foto-perfil img:hover{
+    box-shadow: 10px 10px 10px rgba(81, 19, 94, 0.4);
+    padding-right: 7px;
+}
+.sobre-mi{
+    flex: 1 1 30%;
+    padding: 30px;
+    margin: 100px 20px 100px 20px;
+    background-color: rgba(0, 48, 73, 0.3);
+    color: var(--color5);
+    text-align: justify;
+    order: 2;
+    box-shadow: 10px 10px 10px rgba(81, 19, 94, 0.7);
+}
+.sobre-mi:hover{
+    padding: 33px;
+}
+.sobre-mi h1{
+    font-size: 40px;
+    padding-bottom: 30px;
+    font-weight: bold;
+    letter-spacing: 3px;
+}
+.sobre-mi ul li{
+    margin-bottom: 10px;
+}
+.sobre-mi ul li:hover{
+    color: var(--color3);
+}
+.rrss{
+    padding: 15px;
+}
+.rrss a{
+    padding: 7px;
+    color: var(--color1);
+    background-color: var(--color4);
+    border-radius: 5px;
+}
+.rrss a:hover{
+    color: var(--color4);
+    background-color: var(--color1);
+}
+
+
+/*Pie de página*/
+footer{
+    background-color: var(--color1_trans);
+    padding: 20px;
+}
+footer div{
+    display: flex;
+    flex-wrap: wrap;
     color: var(--color5);
 }
+
+
+/**********Formulario de contacto**************/
+.formulario{
+    width: 80%;
+    margin: auto;
+    display: inline-block;
+    justify-content: space-between;
+    background-color: rgba(0, 48, 73, 0.3);
+}
+
+.formulario h1{
+    font-size: 40px;
+    text-align: center;
+    color: var(--color5);
+    padding: 40px;
+    margin-top: 40px;
+}
+.formulario h2{
+    color: var(--color1);
+    text-align: center;
+    margin-bottom: 30px;
+}
+form{
+    padding: 40px;
+    background: var(--color4_trans);
+    color: var(--color1);
+    width: 50%;
+    margin: auto;
+}
+
 label{
     display: block;
     margin: 8px;
@@ -195,7 +246,7 @@ label{
     display: flex;
     align-items: center;
     justify-content: center;
-    background-color: var(--color1);
+    background-color: var(--color1_trans);
     padding: 20px;
 }
 
@@ -203,15 +254,24 @@ label{
     display: block;
     position: relative;
     padding: 10px;
-    height: 230px;
-    width: 280px;
+    height: 400px;
+    width: 400px;
     border-radius: 50%;
-    border: 5px solid var(--color5);
+    border: 2px solid var(--color5);
+}
+.foto-perfil-cv img:hover{
+    padding: 12px;
+    border: 2px solid var(--color1);
 }
 
 .nombre-cv{
     color: var(--color5);
     padding-left: 2rem;
+}
+
+.nombre-cv:hover{
+    color: var(--color1);
+    padding: 1rem;
 }
 .contenido-cv{
     display: flex;
@@ -222,7 +282,7 @@ label{
     display: inline-block;
     padding: 2rem 1rem 5rem 1rem;
     width: 35%;
-    background-color: var(--color4);
+    background-color: var(--color4_trans);
     color: var(--color1);
 }
 
@@ -232,7 +292,7 @@ label{
     padding: 2rem;
     width: 65%;
     color: var(--color1);
-    background-color: var(--color5);
+    background-color: var(--color5_trans);
 }
 
 /*Formato del texto*/

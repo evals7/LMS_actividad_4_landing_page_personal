@@ -23,7 +23,7 @@
 
 }
 body{
-    background-image: url(./img/fondo.jpg);
+    background-image: url(../img/fondo.JPG);
     height: 100%;
     display: flex;
     flex-direction: column;
@@ -113,24 +113,25 @@ nav{
 
 /*Contenido central homepage*/
 .contenido-index{
+    box-shadow: 10px 10px 10px rgba(0, 0, 0, 0.5);
+    width: 80%;
+    margin: auto;
+    margin-bottom: 20px;
+    position: relative;
     display: flex;  
     flex-wrap: wrap;
     align-items: center;
     justify-content: space-between;
     gap: 2rem;
-    width: 80%;
-    margin: auto;
-    background-color: rgba(0, 48, 73, 0.3);
-
+    background-color: var(--color1_trans);
 }
-
 .foto-perfil{
     order: 1;
 }
 
 .foto-perfil img{
-    width: 600px;
-    height: 600px;
+    width: 450px;
+    height: 450px;
     object-fit: cover;
     border-radius: 50%;
     border: 3px solid var(--color1);
@@ -161,7 +162,7 @@ nav{
     letter-spacing: 3px;
 }
 .sobre-mi ul li{
-    margin-bottom: 10px;
+    margin-bottom: 20px;
 }
 .sobre-mi ul li:hover{
     color: var(--color3);
@@ -197,9 +198,11 @@ footer div{
 .formulario{
     width: 80%;
     margin: auto;
+    margin-bottom: 20px;
     display: inline-block;
     justify-content: space-between;
-    background-color: rgba(0, 48, 73, 0.3);
+    background-color: var(--color1_trans);
+    box-shadow: 10px 10px 10px rgba(0, 0, 0, 0.5);
 }
 
 .formulario h1{
@@ -220,6 +223,7 @@ form{
     color: var(--color1);
     width: 50%;
     margin: auto;
+    margin-bottom: 40px;
 }
 
 label{
@@ -229,17 +233,17 @@ label{
 
 /******Curriculum Vitae********/
 .cv{
-    background-image: url(./img/fondo.jpg);
+    background-image: url(../img/fondo.JPG);
     box-shadow: 10px 10px 10px rgba(0, 0, 0, 0.5);
     width: 80%;
     margin: 0 auto;
+    margin-bottom: 20px;
     position: relative;
 }
 
 /*Nombre y foto -- Parte superior*/
 .cabecera-cv{
     position: relative;
-    color: var(--color1);
     text-align: center;
     margin-top: 5px;
     font-size: 20px;
@@ -254,8 +258,8 @@ label{
     display: block;
     position: relative;
     padding: 10px;
-    height: 400px;
-    width: 400px;
+    height: 300px;
+    width: 300px;
     border-radius: 50%;
     border: 2px solid var(--color5);
 }
@@ -339,4 +343,58 @@ p{
     text-decoration: underline;
 }
 
-/**************Fin Curriculum Vitae***************/
+/*******Proyectos*********/
+.proyectos{
+    box-shadow: 10px 10px 10px rgba(0, 0, 0, 0.5);
+    background-color: var(--color1_trans);
+    width: 80%;
+    margin: auto;
+    margin-bottom: 20px;
+    position: relative;
+    display: flex;  
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+    gap: 2rem;
+    padding: 50px;
+}
+
+.proyectos h1{
+    font-size: 40px;
+    text-align: center;
+    color: var(--color5);
+    margin-top: 10px;   
+}
+
+.proyectos section{
+    background-color: var(--color5);
+    width: 100%;
+    padding: 10px;
+}
+.proyectos section:hover{
+    box-shadow: 10px 10px 10px rgba(0, 0, 0, 0.5);
+    padding: 10px 10px;
+    background-color: var(--color5_trans);
+}
+
+.proyectos h2{
+    font-size: 20px;
+    text-align: left;
+    color: var(--color1);
+    padding: 10px;
+    margin-top: 10px;
+}
+.proyectos p{
+    color: var(--color1);
+    padding: 10px;
+}
+
+.proyectos section ul li, .proyectos section ul li a{
+    text-decoration: none;
+    color: var(--color1);
+    padding: 5px;
+}
+.proyectos section ul li a:hover{
+    padding: 5px  5px;
+    color: var(--color3);
+}

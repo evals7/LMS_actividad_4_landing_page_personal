@@ -40,26 +40,6 @@ body{
     display: none; /*para ocultar el checkbox*/
 }
 
-/*pantallas pequeñas: mostramos el .drawer (icono burguer) y ocultamos el menú.*/
-@media (max-width: 768px){ /*para que se muestre en pantallas de max 768px*/
-    .drawer{
-        display: block; /*mostrar drawer por defecto*/
-        font-size: 1.5rem;
-        color: var(--color1);
-        cursor: pointer;
-    }
-    .menu{
-        display: none; /*ocultar menú por defecto*/
-        flex-direction: column;
-        width: 100%;
-        position: absolute;
-        top: 8vh;
-    }
-    #checkbox:checked ~ .menu { /*marcar checkbox y enlazar al menú*/
-        display: flex;
-    }
-}
-
 /*Logo*/
 .logo{
     height: 5vh;
@@ -397,4 +377,80 @@ p{
 .proyectos section ul li a:hover{
     padding: 5px  5px;
     color: var(--color3);
+}
+/******responsive*****/
+/*pantallas pequeñas: mostramos el .drawer (icono burguer) y ocultamos el menú.*/
+@media (max-width: 768px){ /*para que se muestre en pantallas de max 768px*/
+    
+    .drawer{
+        display: block; /*mostrar drawer por defecto*/
+        font-size: 1.5rem;
+        color: var(--color1);
+        cursor: pointer;
+        padding: 10px;
+    }
+    .menu{
+        display: none; /*ocultar menú por defecto*/
+        flex-direction: column;
+        width: 100%;
+        background-color: var(--color4);
+        position: absolute;
+        left: 0;
+        top: 8vh;
+    }
+    #checkbox:checked ~ .menu { /*marcar checkbox y enlazar al menú*/
+        display: flex;
+    }
+    nav{
+        flex-wrap: wrap;
+        justify-content: space-between;
+        align-items: center;
+        position: relative; 
+        z-index: 1000;      
+    }
+
+    /*index responsive*/
+    .foto-perfil img{
+        width: 100%;
+        max-width: 300px;
+        height: auto;
+        margin: 20px;
+        display: block;
+    }
+    .sobre-mi{
+        text-align: center;
+    }
+    .rrss{
+        display: flex;
+        justify-content: space-evenly
+    }
+
+    /*cv responsive*/
+    .cv{
+        width: 95%;
+    }
+    .cabecera-cv{
+        flex-direction: column;
+        padding: 1rem;
+    }
+    .nombre-cv{
+        font-size: 70%;
+    }
+    .proyectos{
+        width: 95%;
+        padding: 1rem ;
+    }
+
+    /*formulario responsive*/
+    .formulario{
+        width: 95%;
+    }
+    .formulario h1, .formulario h2{
+        font-size: 100%;
+    }
+    form{
+        flex-direction: column;
+        padding: 1rem; 
+    }
+
 }
